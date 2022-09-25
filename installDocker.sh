@@ -28,11 +28,11 @@ sudo usermod -aG docker $dockerUser;
 echo "Creating a network for docker on whcoh all containers will get deployed...";
 sudo docker network create tunnel;
 echo "tunnel network created...";
-echo "System needs to reboot to take changes effect.Enter y to rebbot now else the futher flow wont work!!!";
-if [[ "$x" == "y" || "$x" == "Y" ]]
+echo "System needs to reboot to take changes effect otherwise futher flow wont work!!!. Enter N to postpone rebbot";
+if [[ "$x" == "n" || "$x" == "N" ]]
 then
-    sudo reboot;
-else
     exit 0;
+else
+    sudo reboot;
 fi
 exit 0
