@@ -6,9 +6,9 @@ getUserName(){
     read x;
     if [ -z $x ]
     then
-        echo "No Username entered, defaulting to ubuntu" && dockerUser = "ubuntu";
+        echo "No Username entered, defaulting to ubuntu" && dockerUser="ubuntu";
     else
-        dockerUser = $x;
+        dockerUser=$x;
     fi
 }
 #Installing prerequisite
