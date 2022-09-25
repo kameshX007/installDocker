@@ -26,6 +26,6 @@ getUserName;
 sudo usermod -aG docker $dockerUser;
 #Creating a network for docker on whcoh all containers will get deployed
 echo "Creating a network for docker on whcoh all containers will get deployed...";
-docker network create tunnel;
+sudo docker network create tunnel;
 echo "tunnel network created...";
 exit 0
