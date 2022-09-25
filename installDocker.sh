@@ -18,7 +18,7 @@ sudo sh installPrerequisite.sh;
 #Installing Docker
 echo "Installing Docker...";
 sudo sh installComponents.sh;
-echo "Docker installed successfully...">;
+echo "Docker installed successfully...";
 
 #Adding docker to the user group
 echo "Adding docker to the user group...";
