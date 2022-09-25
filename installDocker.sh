@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 getUserName(){
     echo "Please enter the username";
     echo "We will create a docker folder inside this users home directory to store the docker persistant volume"
@@ -28,4 +28,11 @@ sudo usermod -aG docker $dockerUser;
 echo "Creating a network for docker on whcoh all containers will get deployed...";
 sudo docker network create tunnel;
 echo "tunnel network created...";
+echo "System needs to reboot to take changes effect.Enter y to rebbot now else the futher flow wont work!!!";
+if [[ "$x" == "y" || "$x" == "Y" ]]
+then
+    sudo reboot;
+else
+    exit 0;
+fi
 exit 0
