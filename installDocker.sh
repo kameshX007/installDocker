@@ -12,20 +12,20 @@ getUserName(){
     fi
 }
 #Installing prerequisite
-echo "Installing prerequisite...">installDocker.log;
+echo "Installing prerequisite...";
 sudo sh installPrerequisite.sh;
 
 #Installing Docker
-echo "Installing Docker...">installDocker.log;
+echo "Installing Docker...";
 sudo sh installComponents.sh;
-echo "Docker installed successfully...">>installDocker.log;
+echo "Docker installed successfully...">;
 
 #Adding docker to the user group
-echo "Adding docker to the user group...">installDocker.log;
+echo "Adding docker to the user group...";
 getUserName;
 sudo usermod -aG docker $dockerUser;
 #Creating a network for docker on whcoh all containers will get deployed
-echo "Creating a network for docker on whcoh all containers will get deployed...">installDocker.log;
+echo "Creating a network for docker on whcoh all containers will get deployed...";
 docker network create tunnel;
-echo "tunnel network created...">installDocker.log;
+echo "tunnel network created...";
 exit 0
